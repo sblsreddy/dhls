@@ -145,19 +145,27 @@ Your .env.example is just a template. For local development, copy it to .env.loc
 Steps:
 
 Go to supabase.com and sign in.
+
 Create a new project.
+
 Open the project, then go to Settings → API.
+
 From there, copy:
 
 Project URL → NEXT_PUBLIC_SUPABASE_URL
+
 anon public key → NEXT_PUBLIC_SUPABASE_ANON_KEY
+
 service_role key → SUPABASE_SERVICE_ROLE_KEY
+
 Then set your app URL for local development:
 
 NEXT_PUBLIC_APP_URL=http://localhost:3000
+
 And if you are using Stripe:
 
 STRIPE_SECRET_KEY=sk_test_xxx
+
 Example .env.local:
 
 **Important:** 
