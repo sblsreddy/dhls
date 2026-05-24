@@ -134,3 +134,35 @@ payments
 database/storage
 CI/CD
 mobile compatibility
+
+
+-----------------------
+
+**Database**
+
+Your .env.example is just a template. For local development, copy it to .env.local and fill in the real values from your Supabase project.
+
+Steps:
+
+Go to supabase.com and sign in.
+Create a new project.
+Open the project, then go to Settings → API.
+From there, copy:
+
+Project URL → NEXT_PUBLIC_SUPABASE_URL
+anon public key → NEXT_PUBLIC_SUPABASE_ANON_KEY
+service_role key → SUPABASE_SERVICE_ROLE_KEY
+Then set your app URL for local development:
+
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+And if you are using Stripe:
+
+STRIPE_SECRET_KEY=sk_test_xxx
+Example .env.local:
+
+**Important:** 
+
+**Do not commit .env.local.**
+Keep SUPABASE_SERVICE_ROLE_KEY secret — only use it on the server.
+NEXT_PUBLIC_* keys are safe for client-side use.
+If your current .env.example only has SUPABASE_URL, add the same keys above so the template matches the app requirements.
